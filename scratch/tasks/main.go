@@ -8,14 +8,16 @@ import (
 func main() {
 	wg := sync.WaitGroup{}
 
-	worker(&wg, tasks.TaskOne)
-	worker(&wg, tasks.TaskTwo)
+	wg.Add(1)
+	go worker(&wg, tasks.TaskOne)
+
+	wg.Add(1)
+	go worker(&wg, tasks.TaskTwo)
 
 	wg.Wait()
 }
 
 func worker(wg *sync.WaitGroup, f func()) {
-	wg.Add(1)
 	defer wg.Done()
 	f()
 }
