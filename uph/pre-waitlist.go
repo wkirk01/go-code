@@ -9,6 +9,8 @@ import (
 	"time"
 )
 
+const delim = "\t"
+
 // PreWaitlist make UPH pre waitlist file
 func main() {
 	start := time.Now()
@@ -45,13 +47,13 @@ func check(e error) {
 	}
 }
 
-func delim() string {
-	return "\t"
-}
+// func delim() string {
+// 	return "\t"
+// }
 
 func buildRecord(line string) utilities.Record {
 	record := utilities.Record{}
-	data := strings.Split(line, delim())
+	data := strings.Split(line, delim)
 	var mrn = data[3]
 	var refDate = data[4]
 	var evalDate = data[5]
