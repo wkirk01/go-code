@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bkirk/utilities"
 	"fmt"
+	"github.com/wkirk01/utilities"
 )
 
 func main() {

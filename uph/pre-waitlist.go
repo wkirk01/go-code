@@ -1,9 +1,9 @@
 package main
 
 import (
-	"bkirk/utilities"
 	"bufio"
 	"fmt"
+	"github.com/wkirk01/utilities"
 	"os"
 	"strings"
 	"time"

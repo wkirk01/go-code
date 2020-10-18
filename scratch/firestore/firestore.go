@@ -1,10 +1,10 @@
 package main
 
 import (
-	"bkirk/utilities"
 	"context"
 	firebase "firebase.google.com/go"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/wkirk01/utilities"
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
 )

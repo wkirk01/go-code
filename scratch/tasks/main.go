@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bkirk/scratch/tasks/tasks"
+	"github.com/wkirk01/scratch/tasks/tasks"
 	"sync"
 )
 
