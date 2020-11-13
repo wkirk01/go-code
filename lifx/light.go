@@ -1,9 +1,5 @@
 package lifx
 
-import (
-	"encoding/json"
-)
-
 //Light ...
 type Light struct {
 	ID                   string       `json:"id"`
@@ -54,13 +50,4 @@ type capabilities struct {
 	HasMultiZone         bool `json:"has_multizone"`
 	MinKelvin            int  `json:"min_kelvin"`
 	MaxKelvin            int  `json:"max_kelvin"`
-}
-
-//GetLights ...
-func GetLights() []Light {
-	respBody := MakeRequest("GET", "lights/all", nil)
-	lights := []Light{}
-	err := json.Unmarshal(respBody, &lights)
-	check(err)
-	return lights
 }
