@@ -12,12 +12,12 @@ const lifxBaseURL = "https://api.lifx.com/v1/"
 
 // Client ...
 type Client struct {
-	token string
+	Token string
 }
 
 // NewClient ...
 func NewClient(apptoken string) *Client {
-	return &Client{token: apptoken}
+	return &Client{Token: apptoken}
 }
 
 // MakeRequest ...
