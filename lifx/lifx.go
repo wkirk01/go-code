@@ -10,8 +10,6 @@ import (
 
 const lifxBaseURL = "https://api.lifx.com/v1/"
 
-// var token = "c4682413f1c4efa36095a51f580fc31d45a2f461b4649126e7061173b4984bc3"
-
 // Client ...
 type Client struct {
 	token string
