@@ -12,7 +12,14 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	groups := map[string][]lifx.Light{}
 	for _, light := range lights {
-		fmt.Println(light.Label, "-", light.Group.Name, "-", light.Power)
+		groups[light.Group.Name] = append(groups[light.Group.Name], light)
+	}
+	for groupName, lights := range groups {
+		fmt.Println("\n" + "== " + groupName + " ==")
+		for _, light := range lights {
+			fmt.Println(light.Label, "-", light.Group.Name, "-", light.Power)
+		}
 	}
 }
